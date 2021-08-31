@@ -8,10 +8,12 @@ function maxChar(str) {
   let ar = str.split('');
   let objAr = {};
   for (let i = 0; i < ar.length; i++) {
-    if (objAr[ar[i]] >= 1) {
-      objAr[ar[i]] = objAr[ar[i]] + 1;
-    } else {
-      objAr[ar[i]] = 1;
+    if (ar[i] !== ' ') {
+      if (objAr[ar[i]] >= 1) {
+        objAr[ar[i]] = objAr[ar[i]] + 1;
+      } else {
+        objAr[ar[i]] = 1;
+      }
     }
   }
   let arr = Object.values(objAr);
